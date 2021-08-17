@@ -23,7 +23,7 @@ testeReversedString2()
 
 
 const testReverseSentence1 = () =>{
-   testeFrase1.forEach((teste)=>console.assert(JSON.stringify(reverseSentence(teste.input.frase)) === JSON.stringify(teste.expected_output),
+   testPhrase1.forEach((teste)=>console.assert(JSON.stringify(reverseSentence(teste.input.frase)) === JSON.stringify(teste.expected_output),
    {
       "function":"reverseSentence",
       "expected":teste.expected_output,
@@ -111,5 +111,65 @@ testCalculateRemainder2()
 
 
 const testDistinctValues1  = () =>{
-   
+   distinctValuesArr.forEach((arr)=>console.assert(JSON.stringify(distinctValues(arr.input.numbers))=== JSON.stringify(arr.expected_output),
+                                                {
+                                                   "function":"distinctValues",
+                                                   "expected":arr.expected_output,
+                                                   "got":distinctValues(arr.input.numbers)                                       
+                                                }))
 }
+testDistinctValues1()
+
+const testDistinctValues2 = () =>{
+   distinctValuesArr.forEach((arr)=>console.assert(JSON.stringify(sumDistinctValues(arr.input.numbers)) === JSON.stringify(arr.expected_ouput2),
+                                                {
+                                                   "function":"sumDistinctValues",
+                                                   "expected":arr.expected_ouput2,
+                                                   "got":sumDistinctValues(arr.input.numbers)
+                                                }))
+}
+testDistinctValues2()
+
+
+const testCountValues1 = () =>{
+   countingValuesArr.forEach((arr)=>console.assert(JSON.stringify(countValues(arr.input.numbers))=== JSON.stringify(arr.expected_output),
+                                                {
+                                                   "function":"countValues",
+                                                   "expected":arr.expected_output,
+                                                   "got":countValues(arr.input.numbers)
+                                                }))
+}
+testCountValues1()
+
+const testCountValues2 = () =>{
+   countingValuesArr.forEach((arr)=>console.assert(JSON.stringify(leastAppears(arr.input.numbers))=== JSON.stringify(arr.expected_output2),
+                                                {
+                                                   "function":"firstMostAppears",
+                                                   "expected":arr.expected_output2,
+                                                   "got":leastAppears(arr.input.numbers)
+                                                }))
+}
+testCountValues2()
+
+const testEvaluateExpression1 = () =>{
+   testEvaluateExpressionArr.forEach((arr)=>console.assert(JSON.stringify(evaluateExpression(arr.input.str, arr.input.expression))=== JSON.stringify(arr.expected_output),
+                                                {
+
+                                                   "function":"evaluateExpression",
+                                                   "expression":arr.input.expression,
+                                                   "str":arr.input.str,
+                                                   "expected":arr.expected_output,
+                                                   "got":evaluateExpression(arr.input.str, arr.input.expression)
+                                                }))
+}
+
+testEvaluateExpression1()
+
+
+const testEvaluateExpression2 = () =>{
+   testEvaluateExpressionArr.forEach((arr)=>console.assert(JSON.stringify(highestNumber(arr.input.expression))=== JSON.stringify(arr.expected_outpu2),
+   {
+
+   }))
+}
+testEvaluateExpression2()

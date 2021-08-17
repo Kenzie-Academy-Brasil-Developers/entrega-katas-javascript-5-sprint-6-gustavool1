@@ -1,3 +1,5 @@
+//Kata 1
+
 const testesCorreto1 = [
     {
         "input":{
@@ -65,18 +67,11 @@ const testesCorreto2 = [
     }
 ]
 
-const testeFalhar = [
-    {
-        "input":{
-            "palavra":"futebol"
-        },
-        "expected_output":'futebol'
-    }
-]
 
 
 
-const testeFrase1 = [
+//Kata 2
+const testPhrase1 = [
     {
         "input":{
             "frase":"bob likes dogs"
@@ -287,7 +282,7 @@ const remindersArr = [
         }
     },{
         "input":{
-            "number":13
+            "number":9
         }
     },
     {
@@ -297,4 +292,104 @@ const remindersArr = [
     }
 ]
 
+const distinctValuesArr = [
+    {
+        "input":{
+            "numbers":[1, 3, 5, 3, 7, 3, 1, 1, 5]
+        },
+        "expected_output":[1,3,5,7],
+        "expected_ouput2":16
+    },
+    {
+        "input":{
+            "numbers":[5,3,4,5,3,1,1,2,0,4]
+        },
+        "expected_output":[5,3,4,1,2,0],
+        "expected_ouput2":15
+        
+    },
+    {
+        "input":{
+            "numbers":[4,3,2,2,4,1,1,3]
+        },
+        "expected_output":[4,3,2,1],
+        "expected_ouput2":10
+    },
+    {
+        "input":{
+            "numbers":[1,1,2,2,3,3,4,4,5]
+        },
+        "expected_output":[1, 2, 3, 4, 5],
+        "expected_ouput2":15
+    }
+]
 
+
+const countingValuesArr = [
+    {
+        "input":{
+            "numbers":[5,10,2,5,25,30,5,1,1,2,4]
+        },
+        "expected_output":"5(3),10(1),2(2),25(1),30(1),1(2),4(1)",
+        "expected_output2":"10(1),25(1),30(1),4(1)"
+    },
+    {
+        "input":{
+            "numbers":[1,2,3,3,1]
+        },
+        "expected_output":"1(2),2(1),3(2)",
+        "expected_output2":"2(1)"
+    },
+    {
+        "input":{
+            "numbers":[5,5,5,2,1,4,2]
+        },
+        "expected_output":"5(3),2(2),1(1),4(1)",
+        "expected_output2":"1(1),4(1)"
+    },
+    {
+        "input":{
+            "numbers":[11,12,13,11,11]
+        },
+        "expected_output":"11(3),12(1),13(1)",
+        "expected_output2":"12(1),13(1)"
+    },
+    {
+        "input":{
+            "numbers":[3,4,4,5,5,3,1]
+        },
+        "expected_output":"3(2),4(2),5(2),1(1)",
+        "expected_output2":"1(1)"
+    }
+]
+
+const testEvaluateExpressionArr = [
+    {
+        "input":{
+            "str":"a + b + c - d",
+            "expression":{a: 1, b: 7, c: 3, d: 14}
+        },
+        "expected_output":-3,
+        "expected_outpu2":14
+        //8+3-14
+    },
+    {
+        "input":{
+            "str":"a - b + c - d",
+            "expression":{a: 5, b: 5, c: 4, d: 2}
+        },
+        "expected_output":2,
+        "expected_outpu2":5
+        //5-5+4-2
+    },
+    {
+        "input":{
+            "str":"c - a + b - d",
+            "expression":{a: 2, b: 3, c: 1, d: 2}
+        },
+        "expected_output":0,
+        "expected_outpu2":3
+        //1-2+3-2
+        //1-2+3-2
+    }
+]

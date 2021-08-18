@@ -1,3 +1,4 @@
+//---------------- Kata 1 ------------------
 const reverseString = (string) =>{
     let reversed = ''
     for(let i=string.length-1; i>=0;i--){
@@ -9,7 +10,7 @@ const stringSize = (string) =>{
     return string.length
 }
 
-
+//---------------- Kata 2 ------------------
 const reverseSentence = (phrase) =>{
     phrase = phrase.split(' ')
     let newPhrase = []
@@ -29,7 +30,7 @@ const countingSpaces = (phrase) =>{
     }
     return cont
 }
-
+//---------------- Kata 3 ------------------
 const minimumValue = (arr) =>{
     return Math.min(...arr)
 }
@@ -37,7 +38,7 @@ const indexOfMinimumValue = (arr) =>{
     let minimum = minimumValue(arr)
     return arr.indexOf(minimum)
 }
-
+//---------------- Kata 4------------------
 const maximumValue = (arr) =>{
     return Math.max(...arr)
 }
@@ -49,7 +50,7 @@ const maxisEven = (arr) =>{
         return false
     }
 }
-
+//---------------- Kata 5 ------------------
 const calculateRemainder = (n) =>{
     if(n%2 === 1){
         return true
@@ -57,6 +58,7 @@ const calculateRemainder = (n) =>{
         return false
     }
 }
+
 const areRemainderMultipleOfThree = (n) =>{
     if(n%3 === 0){
         return true
@@ -64,7 +66,7 @@ const areRemainderMultipleOfThree = (n) =>{
         return false
     }
 }
-
+//---------------- Kata 6 ------------------
 const distinctValues = (arr) =>{
     let newArr = []
     for(let i=0; i<arr.length;i++){
@@ -80,7 +82,7 @@ const sumDistinctValues = (arr) =>{
     return sum
 }
 
-
+//---------------- Kata 7 ------------------
 const countValues = (arr) =>{
     let number = []
     let times = []
@@ -150,7 +152,7 @@ const leastAppears = (arr) =>{
     return arrPhrase.replace(/,\s*$/, "")
 }
 
-
+//---------------- Kata 8 ------------------
 const evaluateExpression = (str,exp ) => {
     str = str.split('')
     let res = []
@@ -169,48 +171,56 @@ const evaluateExpression = (str,exp ) => {
             signals.push(str[i])
         }
     }
-    let a = []
+    let signalsAndValues = []
     let i =0
     for(let i=0; i<nums.length;i++){
         
-        a.push(nums[i])
+        signalsAndValues.push(nums[i])
         if(signals[i] !== undefined){
-            a.push(signals[i])
+            signalsAndValues.push(signals[i])
         }
         
         if(signals[i]=== undefined){
             break
         }
     }
-    
-    console.log(a)
     let n = 0
     let arrN = []
-    for(let i=0; i<a.length;i++){
-        if(i%2 === 0){
-            arrN.push(a[i])
-        }if(arrN.length === 2){
-            let sinal = a[i-1]
-            let res = 0
-            if(sinal === '+'){
-                res = arrN[0]+arrN[1]
-            }if(sinal === '-'){
-                res = arrN[0]-arrN[1]
-            }
-            a.splice(i,1,res)
-            arrN = new Array()
-        }
+    for(let i=2; i<signalsAndValues.length;i++){
+       if(i === 2){
+           if(signalsAndValues[i-1] === '+'){
+              signalsAndValues[i] = signalsAndValues[i]+signalsAndValues[i-2]
+              
+           }if(signalsAndValues[i-1] === '-'){
+            signalsAndValues[i] = signalsAndValues[i]-signalsAndValues[i-2]
+            
+           }
+       }
+       if(i === 4){
+            if(signalsAndValues[i-1] === '+'){
+              signalsAndValues[i] = signalsAndValues[i]+signalsAndValues[i-2]
+              
+           }if(signalsAndValues[i-1] === '-'){
+            signalsAndValues[i] = signalsAndValues[i]-signalsAndValues[i-2]
+            
+           }
+       }
+       if(i === 6){
+        if(signalsAndValues[i-1] === '+'){
+            signalsAndValues[i] = signalsAndValues[i]+signalsAndValues[i-2]
+            
+         }if(signalsAndValues[i-1] === '-'){
+          signalsAndValues[i] = signalsAndValues[i]-signalsAndValues[i-2]
+          
+         }
+       }
+       
     }
-    console.log(a)
-
+    let res1 = signalsAndValues[signalsAndValues.length-1]
+    res1 = res1 - res1 - res1
+    return res1
 }
-    
-    
- 
-  // 1 - 2 + 3 - 2
-    
-
-
+   
 const highestNumber = (obj) =>{
     let arr = Object.values(obj)
     return Math.max(...arr)

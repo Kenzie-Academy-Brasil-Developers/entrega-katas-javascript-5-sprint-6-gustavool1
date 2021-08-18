@@ -1,4 +1,4 @@
-//Kata 1
+//----------------Kata 1 ------------------
 
 const testesCorreto1 = [
     {
@@ -70,7 +70,7 @@ const testesCorreto2 = [
 
 
 
-//Kata 2
+//----------------Kata 2 ------------------
 const testPhrase1 = [
     {
         "input":{
@@ -124,7 +124,7 @@ const testPhrase2 = [
         "expected_output": 5
     }
 ]
-
+ //---------------- Kata 3 ------------------ 
 const MinValue = [
     {
       "input":{
@@ -189,7 +189,7 @@ const indexOfMinimum = [
         "expected_output":6
     }
 ]
-
+ //---------------- Kata 4 ------------------
 const maxValueArr = [
     {
         "input":{
@@ -249,7 +249,7 @@ const maxValueEvenArr = [
           },
       }
 ]
-
+// ---------------- Kata 5 ------------------
 const remindersArr = [
     {
         "input":{
@@ -291,7 +291,7 @@ const remindersArr = [
         }
     }
 ]
-
+// ---------------- Kata 6 ------------------
 const distinctValuesArr = [
     {
         "input":{
@@ -324,7 +324,7 @@ const distinctValuesArr = [
     }
 ]
 
-
+//---------------- Kata 7 ------------------
 const countingValuesArr = [
     {
         "input":{
@@ -362,7 +362,7 @@ const countingValuesArr = [
         "expected_output2":"1(1)"
     }
 ]
-
+// Kata 8
 const testEvaluateExpressionArr = [
     {
         "input":{
